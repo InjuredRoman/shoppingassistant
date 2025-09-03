@@ -51,7 +51,7 @@ def loadVectorStore(embeddings):
 
 def indexCatalog(catalogSourceUrls, verbosity=1, use_cache=True):
     if (use_cache):
-        set_llm_cache(SQLiteCache(database_path=".langchain.db")) ## save some requests
+        set_llm_cache(SQLiteCache(database_path=".langchain.db")) ## cache requests
 
     loader = WebBaseLoader(
         web_paths=catalogSourceUrls,
